@@ -1,4 +1,4 @@
-package com.secor.eatnowauthservice;
+package com.jitenbr.ecom.customerservice;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.slf4j.Logger;
@@ -34,7 +34,7 @@ public class MainRestController {
         return ResponseEntity.ok("User signed up successfully");
     }
 
-    @GetMapping("login")
+    @PostMapping("login")
     public ResponseEntity<?> login(@RequestBody Credential credential) throws JsonProcessingException {
         log.info("Received request to login: {}", credential);
         Credential user = credentialRepository.findById(credential.getUsername()).orElse(null);

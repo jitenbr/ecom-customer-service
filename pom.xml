@@ -8,11 +8,11 @@
         <version>3.3.3</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.secor</groupId>
-    <artifactId>eatnow-auth-service</artifactId>
+    <groupId>com.jitenbr.ecom</groupId>
+    <artifactId>ecom-customer-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>eatnow-auth-service</name>
-    <description>eatnow-auth-service</description>
+    <name>ecom-customer-service</name>
+    <description>ecom-customer-service</description>
     <url/>
     <licenses>
         <license/>
@@ -71,8 +71,8 @@
             <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
         <dependency>
-            <groupId>org.postgresql</groupId>
-            <artifactId>postgresql</artifactId>
+            <groupId>com.mysql</groupId>
+            <artifactId>mysql-connector-j</artifactId>
             <scope>runtime</scope>
         </dependency>
         <dependency>

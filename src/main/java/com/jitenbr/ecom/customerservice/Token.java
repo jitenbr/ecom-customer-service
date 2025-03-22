@@ -1,4 +1,4 @@
-package com.secor.eatnowauthservice;
+package com.jitenbr.ecom.customerservice;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -10,14 +10,17 @@ import lombok.Setter;
 @Getter
 @Setter
 @Entity
-@Table(name = "credentials")
-public class Credential {
+@Table(name = "tokens")
+public class Token {
 
     @Id
+    @Column(name = "tokenid", nullable = false)
+    private Integer tokenid;
+
     @Column(name = "username", length = 50)
     private String username;
 
-    @Column(name = "password", length = 50)
-    private String password;
+    @Column(name = "status", length = 20)
+    private String status;
 
 }

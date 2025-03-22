@@ -1,4 +1,4 @@
-package com.secor.eatnowauthservice;
+package com.jitenbr.ecom.customerservice;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
