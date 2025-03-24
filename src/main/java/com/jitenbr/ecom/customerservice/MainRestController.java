@@ -96,6 +96,22 @@ public class MainRestController {
         return ResponseEntity.ok("logged out successfully");
     }
 
+    // get me user associated with token
+    @GetMapping("get/user")
+    public ResponseEntity<?> getUser(@RequestHeader("Authorization") String token) throws JsonProcessingException {
+        log.info("Token: " + token);
+        String[] tokenArray = token.split(" ");
+        log.info("TokenArray: " + tokenArray[1]);
+        if(tokenService.validateToken(tokenArray[1]))
+        {
+            String username = tokenRepository.findById(Integer.valueOf(tokenArray[1])).get().getUsername();
+            log.info("Token is valid");
+            return ResponseEntity.ok(username);
+        }
+        log.info("Token is invalid");
+        return ResponseEntity.ok("invalid");
+    }
+
 
 
 }
